@@ -1,11 +1,7 @@
-
 function App() {
-
   return (
     <>
-      <div>
-        Ecomerce Project
-      </div>
+      <p>Ecomerce project</p>
     </>
   )
 }
