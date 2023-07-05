@@ -1,1 +1,99 @@
-@import "../../css-config/mixins.scss";
+@import "../../mixins.scss";
+
+.headerContainer {
+    background-color: #1d1d1d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 20px 0px;
+}
+
+.stiky-Header {
+    position: sticky;
+    top: 0px;
+    animation: stiky-Header 0.3s ease-in-out forwards;
+}
+
+@keyframes stiky-Header {
+    0% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.left {
+    display: none;
+
+    @include sm {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 5px;
+    }
+
+    .link {
+        padding: 0px 10px;
+        cursor: pointer;
+    }
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    flex-grow: 2;
+    font-size: 15px;
+
+    @include sm {
+        font-size: 20px;
+    }
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+    padding: 5px;
+
+    span {
+        padding: 0px 10px;
+        font-size: 20px;
+        cursor: pointer;
+
+        @include sm {
+            font-size: 24px;
+        }
+    }
+
+    .cart-badge {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        .cart-count {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -8px;
+            right: -4px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgb(141, 0, 141);
+
+        }
+    }
+
+
+
+}
