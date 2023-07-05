@@ -1,1 +1,60 @@
-// @import "../../css-config/mixins.scss";
+@import "../../mixins.scss";
+
+.footer {
+    background-color: #eeebeb;
+    padding: 50px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .footer-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .footer-column {
+                flex-basis: 100%;
+                padding: 10px;
+                color: #333;
+
+        
+                @include sm {
+                    flex-basis: 50%;
+                }
+
+                @include md {
+                    flex-basis: 25%;
+                }
+
+                .icon {
+                    margin-right: 6px;
+                }
+                h4 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+
+                    li {
+                        margin-bottom: 10px;
+
+                        a {
+                            color: #666;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: #000;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
