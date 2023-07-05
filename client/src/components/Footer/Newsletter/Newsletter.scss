@@ -1,1 +1,91 @@
-// @import "../../../css-config/mixins.scss";
+@import "../../../mixins.scss";
+
+.newsLetterContainer {
+    background-image: url("../../../assets/newsletter-bg.jpeg");
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsLetterContent {
+    text-align: center;
+
+    p {
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: rgb(160, 159, 159);
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: rgb(0, 0, 0);
+
+
+        @include md {
+            font-size: 30px;
+        }
+    }
+
+    span {
+        color: rgb(160, 159, 159);
+        font-size: 11px;
+        margin-top:20px ;
+        
+        @include md {
+            font-size: 14px;
+        }
+    }
+
+    .inputContainer {
+margin-top: 20px;
+
+        input {
+            width: 60%;
+            padding: 6px;
+            background-color: white;
+            border: none;
+            outline: none;
+            border: 1px solid grey;
+            border-radius: 1px;
+
+            @include md {
+                padding: 8px;
+            }
+
+
+        }
+
+        .btn {
+            padding: 6px 14px;
+            background-color: #8e2de2;
+            color: white;
+            border-radius: 1px;
+            margin-left: 2px;
+            border:1px solid #8e2de2;
+            outline: none;
+            cursor: pointer;
+
+            @include md {
+                padding: 8px 14px;
+                border-radius: 1px;
+            }
+
+        }
+    }
+
+    .mediaIcons {
+        margin-top: 20px;
+        span {
+            font-size: 17px;
+            color: black;
+
+            @include md {
+                font-size: 25px;
+            }
+        }
+    }
+}
