@@ -1,1 +1,38 @@
-// @import "../../../css-config/mixins.scss";
+@import "../../../mixins.scss";
+
+.product {
+    width: 262px;
+    margin: auto;
+    @include md{
+        margin: 0;
+    }
+
+    p {
+        margin-top: 5px;
+    }
+
+    h3 {
+        font-weight: bold;
+        color: black;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .ImageContainer{
+        overflow: hidden;
+        width: 260px;
+        .productimage {
+            width: 260px;
+            background-color: rgb(241, 238, 238);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            transition: transform .4s;
+            &:hover{
+                overflow: hidden;
+                transform: scale(1.2);
+            }
+    
+        }
+
+    }
+}
