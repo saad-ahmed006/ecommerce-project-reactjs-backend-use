@@ -1,1 +1,10 @@
 // @import "../../css-config/mixins.scss";
+
+.category-heading{
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    font-size: 35px;
+    
+}

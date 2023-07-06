@@ -30,38 +30,3 @@
         }
     }
 }
-
-// .productContainer {
-//     // display: flex;
-//     // flex-direction: column;
-//     // justify-content: center;
-//     // align-items: center;
-//     margin: auto;
-//     border: 2px solid black;
-
-//     .heading {
-//         margin-bottom: 20px;
-//         font-size: 18px;
-//         font-weight: 500;
-//         text-transform: uppercase;
-
-//         @include md {
-//             margin-bottom: 35px;
-//             font-size: 24px;
-//         }
-//     }
-
-//     .products {
-//         border: 2px solid rgb(104, 32, 32);
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         flex-wrap: wrap;
-
-//         @include sm {
-//             margin: auto;
-
-//             width: 90%;
-//         }
-//     }
-// }

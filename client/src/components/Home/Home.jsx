@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home"></div>
         <Banner />
         <Category />  
-        <Products/> 
+        <Products innerHeading={true} headindText={'popular products'}/> 
     </>
         )
 };
