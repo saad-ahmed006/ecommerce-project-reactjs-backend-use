@@ -41,7 +41,7 @@ const Header = () => {
 
                 </div>
             </div>
-            {showCart ? <Cart /> : ''}
+            {showCart ? <Cart setShowCart={setShowCart}/> : ''}
         </>
 
     )
