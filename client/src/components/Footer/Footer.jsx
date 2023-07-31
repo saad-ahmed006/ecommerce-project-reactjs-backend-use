@@ -7,16 +7,16 @@ import "./Footer.scss";
 const Footer = () => {
     return (
         <>
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-columns">
-                        <div class="footer-column">
+            <footer className="footer">
+                <div className="container">
+                    <div className="footer-columns">
+                        <div className="footer-column">
                             <h4>About Us</h4>
                             <ul>
                                 <p>There is no better justice to your playlist & binging than Rockerz 450 boAt | DC edition. If low battery is your enemy, the 15HRS non-stop playback .</p>
                             </ul>
                         </div>
-                        <div class="footer-column">
+                        <div className="footer-column">
                             <h4>Contact</h4>
                             <ul>
                                 <li><FaLocationArrow className="icon" /><a href="#">123 Street, City, Country</a></li>
@@ -24,7 +24,7 @@ const Footer = () => {
                                 <li><MdEmail className="icon"/><a href="#">ms-store.@gmail.com</a></li>
                             </ul>
                         </div>
-                        <div class="footer-column">
+                        <div className="footer-column">
                             <h4>Categories</h4>
                             <ul>
                                 <li><a href="#">HeadPhones</a></li>
@@ -35,7 +35,7 @@ const Footer = () => {
                                 <li><a href="#">Prohectors </a></li>
                             </ul>
                         </div>
-                        <div class="footer-column">
+                        <div className="footer-column">
                             <h4>Pages</h4>
                             <ul>
                                 <li><a href="#">Home</a></li>

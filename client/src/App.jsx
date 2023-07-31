@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer'
 import Newsletter from './components/Footer/Newsletter/Newsletter'
 import SingleProduct from './components/SingleProduct/SingleProduct'
 function App() {
+   
   return (
     <>
       <BrowserRouter>

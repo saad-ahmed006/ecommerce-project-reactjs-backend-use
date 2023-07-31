@@ -1,13 +1,14 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { BsCartX } from "react-icons/bs";
 import CartItem from "./CartItem/CartItem";
 
 import "./Cart.scss";
+import { useSelector } from "react-redux";
 
-const Cart = ({setShowCart}) => {
- 
-const [show] = useState(false)
+const Cart = ({ setShowCart }) => {
+    const cart = useSelector((state) => state.home.cart)
+    console.log(cart);
     return (
         <div className="cart-panel">
             <div
@@ -22,12 +23,12 @@ const [show] = useState(false)
                         onClick={() => setShowCart(false)}
 
                     >
-                        <MdClose className="close-btn"  />
+                        <MdClose className="close-btn" />
                         <span className="text">close</span>
                     </span>
                 </div>
 
-                {show && (
+                {!cart.length && (
                     <div className="empty-cart">
                         <BsCartX />
                         <span>No products in the cart.</span>
@@ -37,20 +38,23 @@ const [show] = useState(false)
                     </div>
                 )}
 
-                {!show && (
+
+                {!!cart.length && (
                     <>
+
                         <CartItem />
                         <div className="cart-footer">
                             <div className="subtotal">
                                 <span className="text">Subtotal:</span>
                                 <span className="text total">
-                                    &#8377;666
+                                    PKR :5555
                                 </span>
+
                             </div>
                             <div className="button">
                                 <button
                                     className="checkout-cta"
-                                  
+
                                 >
                                     Checkout
                                 </button>

@@ -3,12 +3,16 @@
 .product {
     width: 262px;
     margin: auto;
+    cursor: pointer;
     @include md{
         margin: 0;
     }
 
     p {
         margin-top: 5px;
+           text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
     }
 
     h3 {

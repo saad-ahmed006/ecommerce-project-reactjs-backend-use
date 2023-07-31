@@ -1,14 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import "./Product.scss";
-import ProductImg from '../../../assets/earbuds-prod-1.webp'
-const Product = () => {
+
+const Product = ({ id, data }) => {
+    const navigate=useNavigate()
     return (
 
-        <div className="product">
+        <div className="product" key={id} onClick={()=>navigate(`/product/${id}`)}>
             <div className="ImageContainer">
-                <img src={ProductImg} className="productimage" alt="" />
+                <img src={
+                    'http://localhost:1337' +
+                    data.img.data[0].attributes.url
+                } className="productimage" alt="" />
             </div>
-            <p>e with React 18, Strapi, Stripe with...</p>
-            <h3> ₹ 333</h3>
+            <p>{data.title}</p>
+            <h3>PKR {data.price}</h3>
         </div>
     )
 }
