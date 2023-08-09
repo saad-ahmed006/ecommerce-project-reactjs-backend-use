@@ -28,8 +28,9 @@ const Header = () => {
             <div className={`headerContainer ${scrolled ? 'stiky-Header' : ''}`}>
                 <div className='left'>
                     <Link to={"/"} style={{ textDecoration: 'none', color: 'white' }}><p className="link">Home</p></Link>
-                    <p className="link">About</p>
-                    <p className="link" >Categories</p>
+                    <Link to={"/about"} style={{ textDecoration: 'none', color: 'white' }}><p className="link">About</p></Link>
+                    
+                    <p className="link" >Subcription</p>
 
                 </div>
                 <div className='middle'>
@@ -39,8 +40,8 @@ const Header = () => {
 
                     <span><AiOutlineSearch onClick={() => { setShowSearch(true) }} /> </span>
                     <span><AiOutlineHeart /></span>
-                    <div className="cart-badge" onClick={() => setShowCart(true)}>
-                        <span><AiOutlineShoppingCart /></span>
+                    <div className="cart-badge" onClick={() => setShowCart(true)} >
+                        <span ><AiOutlineShoppingCart /></span>
                         {
                             cart.length >= 1 ?
                                 <div className="cart-count">{cart.length}</div>:

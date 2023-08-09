@@ -75,6 +75,7 @@
             height: calc(100vh - 110px);
             overflow: auto;
             margin: 20px 0;
+            
             @include md {
                 height: calc(100vh - 160px);
             }

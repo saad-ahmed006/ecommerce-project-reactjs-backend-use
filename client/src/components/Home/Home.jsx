@@ -12,7 +12,7 @@ import { useLocation } from "react-router-dom";
 
 const Home = () => {
     const [loading, setloading] = useState(true)
-    const location=useLocation()
+    const location = useLocation()
     const { categories } = useSelector((state) => state.home.categories)
     const { products } = useSelector((state) => state.home.products)
     // const { cart } = useSelector((state) => state.home.cart)
@@ -43,7 +43,7 @@ const Home = () => {
             const res = await fetchDataFromApi("/api/products?populate=*")
             dispatch(getProductItemSuccess({ products: res.data }))
             setloading(false)
-            
+
         } catch (error) {
             console.log(error);
         }
@@ -53,11 +53,10 @@ const Home = () => {
         <>
             <div className="home" ></div>
             <Banner />
-        
 
-                    <Category categories={categories} loading={loading}/>
-        
-            <Products innerHeading={true} headindText={'popular products'} products={products} loading={loading}/>
+            <Category categories={categories} loading={loading} />
+
+            <Products innerHeading={true} headindText={'popular products'} products={products} loading={loading} />
         </>
     )
 };

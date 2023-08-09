@@ -13,7 +13,7 @@ const Product = ({ id, data }) => {
                 } className="productimage" alt="" />
             </div>
             <p>{data.title}</p>
-            <h3>PKR {data.price}</h3>
+            <h3>PKR : {data.price}</h3>
         </div>
     )
 }

@@ -1,0 +1,92 @@
+@import '../../mixins.scss';
+
+.about-page {
+  padding: 1.5rem 1rem;
+  text-align: left;
+
+
+  .about-header {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+
+
+    h1 {
+      font-size: 1.7rem;
+      @include md {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column; 
+
+    .about-section {
+      max-width:100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem 2rem;
+      background-color:#f9f9f9;
+      border-radius: 5px;
+
+      @include md {
+        max-width: 97%;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        @include md{
+          font-size: 2rem;
+
+        }
+      }
+      
+      p {
+        font-size: 0.9rem;
+        color: #666;
+        @include md{
+          
+          font-size: 1rem;
+        }
+      }
+
+    }
+  }
+
+
+  .enjoy-shopping {
+    // margin-top: 0.5rem;
+    padding: 1.4rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    width: 97%;
+    
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .shopping-button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-image: linear-gradient(to right, #8e2de2, #4a00e0);   
+         border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      color: white;
+      font-weight: bold;
+      
+    }
+  }
+}
+  //   @media (max-width: 768px) {
+  //     .about-content {
+  //       .about-section {
+  //         max-width: 100%;
+  //       }
+  //     }
+  //   }
+    // }}

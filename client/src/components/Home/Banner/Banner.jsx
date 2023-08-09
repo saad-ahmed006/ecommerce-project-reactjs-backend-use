@@ -1,6 +1,7 @@
 import React from "react";
 import "./Banner.scss";
 import BannerImg from "../../../assets/banner-img.png"
+import { Link } from "react-router-dom";
 const Banner = () => {
     return  <div className="hero-banner">
     <div className="content">
@@ -12,7 +13,7 @@ const Banner = () => {
                 curae tempor
             </p>
             <div className="ctas">
-                <div className="banner-cta">Read More</div>
+                <Link to={'/about'} style={{ textDecoration: 'none', color: 'white' }}><div className="banner-cta">Read More</div></Link>
                 <div className="banner-cta v2">Shop Now</div>
             </div>
         </div>

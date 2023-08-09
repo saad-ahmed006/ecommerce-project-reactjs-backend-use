@@ -47,7 +47,6 @@ const SingleProduct = () => {
         }
     }
    
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location]);
@@ -77,7 +76,7 @@ const SingleProduct = () => {
 
                                     <div className="right">
                                         <span className="name">{product.title}</span>
-                                        <span className="price">&#8377;{product.price}</span>
+                                        <span className="price">PKR : {product.price}</span>
                                         <span className="desc">{product.desc}</span>
 
                                         <div className="cart-buttons">
@@ -87,9 +86,11 @@ const SingleProduct = () => {
                                                 <span onClick={increment}>+</span>
                                             </div>
                                             <button
-                                                className="add-to-cart-button" onClick={() => {dispatch(AddToCart(newPayload))
-                                                setquantity(1)
-                                                }} >
+                                                className="add-to-cart-button" 
+                                                onClick={() => {dispatch(AddToCart(newPayload))
+                                                setquantity(1) 
+                                            }} 
+                                                >
                                                 <FaCartPlus size={20} />
                                                 ADD TO CART
                                             </button>

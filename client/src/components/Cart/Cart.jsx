@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdClose } from "react-icons/md";
 import { BsCartX } from "react-icons/bs";
 import CartItem from "./CartItem/CartItem";
 
 import "./Cart.scss";
-import { useSelector } from "react-redux";
+import { useSelector, } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({ setShowCart }) => {
+    const navigate = useNavigate()
     const cart = useSelector((state) => state.home.cart)
-    console.log(cart);
+    const [cartSubTotal, setCartSubTotal] = useState(0)
+    useEffect(() => {
+        let subTotal = 0;
+        {
+            cart?.map((item) => (
+                subTotal += item?.attributes?.quan * item?.attributes?.attributes?.price
+            ))
+        }
+        setCartSubTotal(subTotal)
+    },)
+
     return (
         <div className="cart-panel">
             <div
@@ -32,7 +44,11 @@ const Cart = ({ setShowCart }) => {
                     <div className="empty-cart">
                         <BsCartX />
                         <span>No products in the cart.</span>
-                        <button className="return-cta" >
+                        <button className="return-cta" onClick={() => {
+                            setShowCart(false)
+                        }
+
+                        }>
                             RETURN TO SHOP
                         </button>
                     </div>
@@ -42,12 +58,12 @@ const Cart = ({ setShowCart }) => {
                 {!!cart.length && (
                     <>
 
-                        <CartItem />
+                        <CartItem cart={cart} />
                         <div className="cart-footer">
                             <div className="subtotal">
                                 <span className="text">Subtotal:</span>
                                 <span className="text total">
-                                    PKR :5555
+                                    PKR : {cartSubTotal}
                                 </span>
 
                             </div>
